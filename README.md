@@ -37,13 +37,6 @@ Taha-mozafari-web/
 برای مشاهده و بازخورد می‌توانید از لینک زیر استفاده کنید:
 
 [https://Tahamz.runflare.run](https://Tahamz.runflare.run)
-
-## 📸 پیش‌نمایش
-
-![پیش‌نمایش سایت شخصی](https://github.com/Tahamozafari1234/Taha-mozafari-web/assets/شاید نیاز باشه عکست رو آپلود کنی)
-
-## 🌟 از کجا شروع کنم؟
-
 1. پروژه را Clone کنید:
    ```bash
    git clone https://github.com/Tahamozafari1234/Taha-mozafari-web.git
