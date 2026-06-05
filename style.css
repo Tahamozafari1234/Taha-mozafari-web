@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: 'Lalezar', Tahoma, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    transition: all 0.25s linear;
+}
+
+#visit-project {
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: 'Lalezar';
+    src: url('fonts/Lalezar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Lalezar', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: #f4f4ec;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+#avatar-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 0px;
+    border: 5px solid #764ba2;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+.badge {
+    background: linear-gradient(135deg, #667eea, #FFAF47, #764ba2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    animation: loop 3s linear infinite;
+}
+
+.age {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.age span {
+    color: #764ba2;
+    font-weight: bold;
+}
+
+.section {
+    background: #f4f4ec;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-right: 5px solid #FFAF47;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.section:hover {
+    box-shadow: 0 8px 20px #ffaf47d5;
+    border: 1px solid #FFAF47;
+    transform: translateX(5px);
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+h3::before {
+    content: attr(data-icon);
+    font-size: 24px;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #764ba2;
+    border: 1px solid #764ba2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    height: fit-content;
+}
+
+.project-card {
+    background: white;
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    margin: 0;
+    border: 1px solid #764ba2;
+}
+
+.project-card h3 {
+    color: #764ba2;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+
+#achievements {
+    list-style: none;
+}
+
+#achievements li {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border: 1px solid #764ba2;
+    font-family: 'Lalezar', Tahoma, sans-serif;
+}
+
+#achievements li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+    border-bottom: 3px solid #764ba2;
+}
+
+#achievements li::before {
+    content: "🏆";
+    font-size: 20px;
+}
+
+#certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cert {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #764ba2;
+    border: 1px solid #764ba2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-btn {
+    background: #f8f9fa;
+    padding: 25px 25px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid #764ba2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s linear;
+    flex-wrap: wrap;
+}
+
+@keyframes loop {
+    0% {
+        background: linear-gradient(135deg, #667eea, #ffaf47cb, #764ba2);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #764ba2, #ffaf47cb, #667eea);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #667eea, #ffaf47cb, #764ba2);
+    }
+}
+
+.link-btn:hover {
+    background: #764ba2;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+footer p {
+    background-color: #FFAF47;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.cert:hover {
+    background: #764ba2;
+    color: white;
+}
+
+.skill:hover {
+    background-color: #764ba2;
+    color: white;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+    transform: translateY(-5px);
+    border-bottom: 3px solid #764ba2;
+}
+
+#quera::before {
+    content: "💾";
+}
+
+#footer-span {
+    letter-spacing: 1px;
+    font-family: 'Lalezar', Tahoma, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+    scroll-padding-top: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f4ec;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 20px;
+}
+
+.project-card p {
+    flex-wrap: wrap;
+}
+
+#nav {
+    background: #f4f4ec;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #FFAF47;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nav-button {
+    background: #f8f9fa;
+    padding: 5px 5px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+    border: 1px solid #764ba2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin: 3px;
+    margin-left: 5px;
+}
+
+.nav-button,
+.nav-button::after,
+.nav-button::before {
+    transition: all 0.25s linear;
+}
+
+.nav-button:hover {
+    background: #764ba2;
+    color: white;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+}
+
+#nav:hover {
+    box-shadow: 0 8px 20px #ffaf47d5;
+    border-bottom: 5px solid #FFAF47;
+    transform: translateY(-5px);
+    margin-bottom: 10px;
+}
+
+#about {
+    font-size: 14px;
+}
+
+/*
+ریسپانسیو سازی
+*/
+@media (max-width: 600px) {
+    .skill {
+        font-size: 14px;
+    }
+
+    #nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        font-size: 14px;
+    }
+
+    .link-btn {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .skill {
+        font-size: 14px;
+    }
+
+    .project-card {
+        max-width: 150px;
+        min-width: 0px;
+        padding: 10px;
+        margin-right: 0em;
+    }
+}
+
+@media (max-width: 450px) {
+    #achievements li {
+        font-size: 14px;
+    }
+
+    #about {
+        font-size: 12px;
+    }
+
+    .link-btn {
+        padding: 15px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skill {
+        font-size: 14px;
+    }
+
+    .project-card {
+        max-width: 85%;
+        min-width: 0px;
+        padding: 10px;
+        margin-right: 0em;
+    }
+
+    .nav-button {
+        font-size: 12px;
+    }
+
+    #achievements li {
+        font-size: 12px;
+    }
+
+    .link-btn {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .project-card {
+        width: 190px;
+    }
+}
+
+/* حالت تیره */
+.dark-mode-btn {
+    background-color: #9b59b6;
+    padding: 5px 5px;
+    border-radius: 50px;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+    transition: background-color 0.3s linear;
+    display: flex;
+    margin: 3px;
+}
+
+.dark-mode-btn:hover {
+    background-color: #764ba2;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .container,
+body.dark-mode .project-card,
+body.dark-mode #achievements li {
+    background: #121412bc;
+    color: #e0e0e0;
+    border-color: #9b59b6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid#764ba2;
+}
+
+body.dark-mode .section,
+body.dark-mode .skill,
+body.dark-mode .cert,
+body.dark-mode .nav-button,
+body.dark-mode #nav {
+    background: #181a18;
+}
+
+body.dark-mode .nav-button:hover {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-button,
+body.dark-mode .link-btn {
+    color: #9b59b6;
+    background: #181a18;
+}
+
+body.dark-mode .link-btn:hover {
+    color: #e0e0e0;
+}
+
+body.dark-mode .link-btn,
+body.dark-mode .link-btn::after,
+body.dark-mode .link-btn::before {
+    transition: all 0.25s linear;
+}
+
+body.dark-mode .nav-button,
+body.dark-mode .nav-button::after,
+body.dark-mode .nav-button::before {
+    transition: all 0.25s linear;
+}
+
+body.dark-mode .section h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .cert:hover {
+    color: #e0e0e0;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+}
+
+body.dark-mode #achievements li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+    border-bottom: 3px solid #9b59b6;
+}
+
+body.dark-mode .cert {
+    color: #9b59b6;
+}
+
+body.dark-mode .skill {
+    color: #9b59b6;
+}
+
+body.dark-mode .skill:hover {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-card:hover {
+    border-bottom: 3px solid #9b59b6;
+    box-shadow: 0 8px 20px rgba(103, 24, 182, 0.489);
+}
+
+body.dark-mode #page-title {
+    color: #e0e0e0;
+}
+
+body.dark-mode .age {
+    color: #e0e0e0;
+}
+
+body.dark-mode #footer-span {
+    color: #e0e0e0;
+    font-family: 'Lalezar', Tahoma, sans-serif;
+}
+
+body.dark-mode footer p {
+    background-color: #b87e1e;
+    color: #e0e0e0;
+    border-radius: 20px;
+}
